@@ -1,0 +1,13 @@
+services:
+  opencvpg:
+    build: .
+    image: opencv-pg:linux
+    stdin_open: true
+    tty: true
+    environment:
+      - DISPLAY=${DISPLAY}
+      - QTWEBENGINE_CHROMIUM_FLAGS=--no-sandbox --disable-gpu
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - ./data:/data
+    network_mode: host

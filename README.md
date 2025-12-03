@@ -19,42 +19,35 @@ Build docker
 docker build -t opencv-pg:linux .
 ```
 
+## To Run Docker
 Give Docker Access to GUI
 ```
 xhost +local:docker
 ```
 
-
-## Usage Inside Docker
+```
+docker compose run --rm opencvpg
+```
+## Usage inside Docker
 ### Playground
+
+
 To launch the OpenCV Playground with:
 * The built-in image:
 
 ```shell
-docker run -it --rm \
-    -e DISPLAY=$DISPLAY \
-    -e QTWEBENGINE_CHROMIUM_FLAGS="--no-sandbox --disable-gpu" \
-    -v /tmp/.X11-unix:/tmp/.X11-unix \
-    opencv-pg:linux opencvpg
+opencvpg
 ```
 
 * An image of your choice:
 
 ```shell
-docker run -it --rm \
-    -e DISPLAY=$DISPLAY \
-    -e QTWEBENGINE_CHROMIUM_FLAGS="--no-sandbox --disable-gpu" \
-    -v /tmp/.X11-unix:/tmp/.X11-unix \
-    opencv-pg:linux opencvpg --image <path-to-image.png>
+opencvpg --image <path-to-image.png>
 ```
 
 * Without the documentation window:
 ```shell
-docker run -it --rm \
-    -e DISPLAY=$DISPLAY \
-    -e QTWEBENGINE_CHROMIUM_FLAGS="--no-sandbox --disable-gpu" \
-    -v /tmp/.X11-unix:/tmp/.X11-unix \
-    opencv-pg:linux opencvpg --image <path-to-image.png> --no-docs
+opencvpg --image <path-to-image.png> --no-docs
 ```
 
 ### Custom Pipeline
