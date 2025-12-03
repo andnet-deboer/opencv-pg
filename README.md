@@ -5,7 +5,7 @@ It also comes with a custom `Pipeline Launcher` that allows you to build and int
 
 Full documentation can be found on [Read the Docs](https://opencv-pg.readthedocs.io/en/latest/).
 
-Find the original readme at OriginalREADME.md
+Find the original readme at [OriginalREADME.md](https://github.com/andnet-deboer/opencv-pg/blob/master/OriginalREADME.md)
 
 ## Demo
 ![alt text](example.png)
