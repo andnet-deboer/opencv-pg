@@ -8,7 +8,7 @@ Full documentation can be found on [Read the Docs](https://opencv-pg.readthedocs
 Find the original readme at OriginalREADME.md
 
 ## Demo
-<a href="https://drive.google.com/uc?export=view&id=1i4jmCHebu1_ognIwj2n4vtpCaT8BHWGI"><img src="https://media.giphy.com/media/GQj3aod8oKoxpJ4sC3/giphy.gif" style="width: 500px; height: auto;" /></a>
+![alt text](example.png)
 
 
 ## Setup Docker
