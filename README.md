@@ -31,18 +31,30 @@ To launch the OpenCV Playground with:
 * The built-in image:
 
 ```shell
-docker run -it --rm     -e DISPLAY=$DISPLAY     -e QTWEBENGINE_CHROMIUM_FLAGS="--no-sandbox --disable-gpu"     -v /tmp/.X11-unix:/tmp/.X11-unix     opencv
+docker run -it --rm \
+    -e DISPLAY=$DISPLAY \
+    -e QTWEBENGINE_CHROMIUM_FLAGS="--no-sandbox --disable-gpu" \
+    -v /tmp/.X11-unix:/tmp/.X11-unix \
+    opencv-pg:linux opencvpg
 ```
 
 * An image of your choice:
 
 ```shell
-docker run -it --rm     -e DISPLAY=$DISPLAY     -e QTWEBENGINE_CHROMIUM_FLAGS="--no-sandbox --disable-gpu"     -v /tmp/.X11-unix:/tmp/.X11-unix     opencv-pg:linux opencvpg --image <path-to-image.png>
+docker run -it --rm \
+    -e DISPLAY=$DISPLAY \
+    -e QTWEBENGINE_CHROMIUM_FLAGS="--no-sandbox --disable-gpu" \
+    -v /tmp/.X11-unix:/tmp/.X11-unix \
+    opencv-pg:linux opencvpg --image <path-to-image.png>
 ```
 
 * Without the documentation window:
-
-docker run -it --rm     -e DISPLAY=$DISPLAY     -e QTWEBENGINE_CHROMIUM_FLAGS="--no-sandbox --disable-gpu"     -v /tmp/.X11-unix:/tmp/.X11-unix     opencv-pg:linux opencvpg --image <path-to-image.png> --no-docs
+```shell
+docker run -it --rm \
+    -e DISPLAY=$DISPLAY \
+    -e QTWEBENGINE_CHROMIUM_FLAGS="--no-sandbox --disable-gpu" \
+    -v /tmp/.X11-unix:/tmp/.X11-unix \
+    opencv-pg:linux opencvpg --image <path-to-image.png> --no-docs
 ```
 
 ### Custom Pipeline
